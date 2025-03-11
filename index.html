@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Fralda do Matteo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/Banner/Urso.png" alt="Bebê" class="left">
+        <h1>Chá de Fralda do Matteo</h1>
+        <img src="img/Banner/Girafa.png" alt="Carrinho de bebê" class="right">
+    </header>
+    
+    <section class="description">
+        <h2>Sejam bem-vindos!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel justo non nisl tincidunt vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer non diam nec risus vehicula finibus.</p>
+    </section>
+
+    <section class="product-section">
+        <h2>Lista de Presentes</h2>
+
+        <div class="product-container">
+            <button class="arrow left" onclick="prevPage()">&#10094;</button>
+        
+            <div class="product-list">
+                <div class="card">
+                    <img src="img/Produtos/1.jpg" alt="Produto 1">
+                    <div class="card-content">
+                        <h3>Loção Hidratante Recém Nascido</h3>
+                        <p class="price">R$ 40,00</p>
+                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '1')">Presentear</button>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="img/Produtos/2.jpg" alt="Produto 2">
+                    <div class="card-content">
+                        <h3>Kit Triplo - Mamadeira Pétala</h3>
+                        <p class="price">R$ 300,00</p>
+                        <button class="buy-button" onclick="openModal('Kit Triplo Mamadeira Pétala', 'R$ 300,00', '2')">Presentear</button>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <img src="img/Produtos/3.jpg" alt="Produto 3">
+                    <div class="card-content">
+                        <h3 style="justify-content: center;">Jogo de Lençol - Bordado de Bichinhos da Floresta</h3>
+                        <p class="price">R$ 60,00</p>
+                        <button class="buy-button" onclick="openModal('Jogo de Lençol - Bordade de Bichinhos da Floresta', 'R$ 60,00', '3')">Presentear</button>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="img/Produtos/1.jpg" alt="Produto 1">
+                    <div class="card-content">
+                        <h3>Loção Hidratante Recém Nascido</h3>
+                        <p class="price">R$ 40,00</p>
+                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '1')">Presentear</button>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img src="img/Produtos/2.jpg" alt="Produto 1">
+                    <div class="card-content">
+                        <h3>Loção Hidratante Recém Nascido</h3>
+                        <p class="price">R$ 40,00</p>
+                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '2')">Presentear</button>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="arrow right" onclick="nextPage()">&#10095;</button>
+        </div>
+
+        <div class="show-all">
+            <button class="show-all-button" onclick="showAll()">Exibir todos os presentes</button>
+        </div>
+    </section>      
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">&times;</button>
+            <br>
+
+            <div class="modal-product">
+                <img id="productImage" src="" alt="Produto 3">
+                <div class="info-product">
+                    <h3 id="modalProductName">Produto</h3>
+                    <p id="modalProductPrice">Preço</p>
+                </div>
+            </div>
+            
+            <img src="" alt="QR Code" id="qrcode">
+            <p>Escaneie o QR code para realizar a compra ou copie o link abaixo:</p>
+            <p id="productLink">https://pagamento.link</p>
+            <button class="buy-button" onclick="copyLink()">Copiar Link</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
