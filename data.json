@@ -41,6 +41,16 @@
     },
     {
         "id": "9",
+        "name": "Kit de Meias para Recém Nascido - 6 pares",
+        "price": "R$ 35,00"
+    },
+    {
+        "id": "10",
+        "name": "Conjunto Térmico Longo",
+        "price": "R$ 55,00"
+    },
+    {
+        "id": "11",
         "name": "Mamadeira Pétala",
         "price": "R$ 100,00"
     }   
