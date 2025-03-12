@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "name": "Naninha de Girafinha",
+        "price": "R$ 50,00"
+    },
+    {
+        "id": "2",
+        "name": "Sabonete Líquido Recém Nascido",
+        "price": "R$ 20,00"
+    },
+    {
+        "id": "3",
+        "name": "Loção Hidratante Recém Nascido",
+        "price": "R$ 40,00"
+    },
+    {
+        "id": "4",
+        "name": "Fralda Pampers Confort Sec P - 50 unidades",
+        "price": "R$ 80,00"
+    },
+    {
+        "id": "5",
+        "name": "Jogo de Lençol - Bordado de Bichinhos da Floresta",
+        "price": "R$ 60,00"
+    },
+    {
+        "id": "6",
+        "name": "Óleo Hidratante Relaxante Johnson's",
+        "price": "R$ 65,00"
+    },
+    {
+        "id": "7",
+        "name": "Lenços Umedecidos Johnson's - 48 unidades",
+        "price": "R$ 25,00"
+    },
+    {
+        "id": "8",
+        "name": "Lenços Umedecidos Pampers - 190 unidades",
+        "price": "R$ 30,00"
+    },
+    {
+        "id": "9",
+        "name": "Mamadeira Pétala",
+        "price": "R$ 100,00"
+    }   
+]

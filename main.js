@@ -21,7 +21,6 @@ function copyLink() {
         });
 }
 
-
 window.onclick = function (event) {
     const modal = document.getElementById('modal');
     if (event.target === modal) {
@@ -29,15 +28,44 @@ window.onclick = function (event) {
     }
 }
 
+async function loadProducts() {
+    try {
+        const response = await fetch('data.json');
+        const products = await response.json();
 
+        const productList = document.querySelector('.product-list');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            card.innerHTML = `
+                <img src="img/Produtos/${product.id}.jpg" alt="${product.name}">
+                <div class="card-content">
+                    <h3>${product.name}</h3>
+                    <p class="price">${product.price}</p>
+                    <button class="buy-button" onclick="openModal('${product.name}', '${product.price}', '${product.id}')">
+                    Presentear
+                    </button>
+                </div>
+            `;
+
+            productList.appendChild(card);
+
+            updateItemsPerPage()
+        });
+    } catch (error) {
+        console.error('Erro ao carregar produtos:', error);
+    }
+}
 
 let currentPage = 0;
 let itemsPerPage = 1;
-const productList = document.querySelector('.product-list');
-const allCards = Array.from(document.querySelectorAll('.product-list .card'));
 let showingAll = false;
 
 function updateItemsPerPage() {
+    const allCards = Array.from(document.querySelectorAll('.product-list .card'));
+
     const screenWidth = window.innerWidth;
 
     if (screenWidth >= 1200) {
@@ -57,6 +85,8 @@ function updateItemsPerPage() {
 }
 
 function updateDisplay() {
+    const allCards = Array.from(document.querySelectorAll('.product-list .card'));
+
     const start = currentPage * itemsPerPage;
     const end = start + itemsPerPage;
 
@@ -70,18 +100,24 @@ function updateDisplay() {
 }
 
 function nextPage() {
+    const allCards = Array.from(document.querySelectorAll('.product-list .card'));
+    
     const totalPages = Math.ceil(allCards.length / itemsPerPage);
     currentPage = (currentPage + 1) % totalPages;
     updateDisplay();
 }
 
 function prevPage() {
+    const allCards = Array.from(document.querySelectorAll('.product-list .card'));
+
     const totalPages = Math.ceil(allCards.length / itemsPerPage);
     currentPage = (currentPage - 1 + totalPages) % totalPages;
     updateDisplay();
 }
 
 function showAll() {
+    const allCards = Array.from(document.querySelectorAll('.product-list .card'));
+
     showingAll = !showingAll;
 
     if (showingAll) {
@@ -115,7 +151,35 @@ function showAll() {
     }
 }
 
+document.getElementById('recadoForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // Trocar pelo FORM ID correspondente
+    const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSc-U9ev8A0UCvMt5hmwUxk6WxElCgngovBjvX-iRjtBCL-UZA/formResponse?usp=dialog';
+
+    // Trocar os entry IDs do forms
+    const formData = new FormData();
+    formData.append('entry.519513100', nome);       
+    formData.append('entry.1337072746', mensagem);   
+
+    fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+    })
+    .then(() => {
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('recadoForm').reset();
+    })
+    .catch((error) => {
+        alert('Houve um erro ao enviar seu recado.');
+        console.error('Erro:', error);
+    });
+});
+
 // Inicializa a exibição
-updateDisplay();
-updateItemsPerPage();
+loadProducts();
 window.addEventListener('resize', updateItemsPerPage);

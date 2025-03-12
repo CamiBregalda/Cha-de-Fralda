@@ -19,8 +19,16 @@
     </header>
     
     <section class="description">
-        <h2>Sejam bem-vindos!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel justo non nisl tincidunt vulputate. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer non diam nec risus vehicula finibus.</p>
+        <h2>Oiêê! Eu sou o Matteo!</h2>
+        <p>Seja muuuito bem-vindo (a) ao meu Chá de Fralda! A mamãe e o papai estão preparando tudo com muito amor e carinho, porque a gente quer muito dividir esse momento gostoso com pessoas especiais como você! 💙</p>
+        <p>Sua presença é meu maior presente, mas caso queira me presentear, criamos um cantinho aqui com ideias de presentinhos. Assim, ninguém fica na dúvida e sobra mais tempinho pra brincar! 🧸✨</p>
+        
+        <h4>🍼 Como faz?</h4>
+        <p>Aqui embaixo tem uma listinha com algumas sugestões. Se quiser me dar um presentinho por aqui, é só clicar no botão “Presentear” e ler o qr code (se preferir, deixei o link também 😊)!</p>
+        
+        <h4>🎁 Prefere dar o presente pessoalmente?</h4>
+        <p>A gente vai adorar ver você no dia do chá! Vai ser uma festa!</p>
+        <p>Muito obrigada pelo carinho e por fazer parte dessa aventura com a gente! Tô ansioso pra te conhecer! 😊💙</p>
     </section>
 
     <section class="product-section">
@@ -30,50 +38,7 @@
             <button class="arrow left" onclick="prevPage()">&#10094;</button>
         
             <div class="product-list">
-                <div class="card">
-                    <img src="img/Produtos/1.jpg" alt="Produto 1">
-                    <div class="card-content">
-                        <h3>Loção Hidratante Recém Nascido</h3>
-                        <p class="price">R$ 40,00</p>
-                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '1')">Presentear</button>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <img src="img/Produtos/2.jpg" alt="Produto 2">
-                    <div class="card-content">
-                        <h3>Kit Triplo - Mamadeira Pétala</h3>
-                        <p class="price">R$ 300,00</p>
-                        <button class="buy-button" onclick="openModal('Kit Triplo Mamadeira Pétala', 'R$ 300,00', '2')">Presentear</button>
-                    </div>
-                </div>
-            
-                <div class="card">
-                    <img src="img/Produtos/3.jpg" alt="Produto 3">
-                    <div class="card-content">
-                        <h3 style="justify-content: center;">Jogo de Lençol - Bordado de Bichinhos da Floresta</h3>
-                        <p class="price">R$ 60,00</p>
-                        <button class="buy-button" onclick="openModal('Jogo de Lençol - Bordade de Bichinhos da Floresta', 'R$ 60,00', '3')">Presentear</button>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <img src="img/Produtos/1.jpg" alt="Produto 1">
-                    <div class="card-content">
-                        <h3>Loção Hidratante Recém Nascido</h3>
-                        <p class="price">R$ 40,00</p>
-                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '1')">Presentear</button>
-                    </div>
-                </div>
-    
-                <div class="card">
-                    <img src="img/Produtos/2.jpg" alt="Produto 1">
-                    <div class="card-content">
-                        <h3>Loção Hidratante Recém Nascido</h3>
-                        <p class="price">R$ 40,00</p>
-                        <button class="buy-button" onclick="openModal('Loção Hidratante Recém Nascido', 'R$ 40,00', '2')">Presentear</button>
-                    </div>
-                </div>
+                <!-- Cards adicionados dinamicamente -->
             </div>
         
             <button class="arrow right" onclick="nextPage()">&#10095;</button>
@@ -83,7 +48,6 @@
             <button class="show-all-button" onclick="showAll()">Exibir todos os presentes</button>
         </div>
     </section>      
-    
     <div id="modal" class="modal">
         <div class="modal-content">
             <button class="close-button" onclick="closeModal()">&times;</button>
@@ -103,6 +67,18 @@
             <button class="buy-button" onclick="copyLink()">Copiar Link</button>
         </div>
     </div>
+
+    <section class="message-container">
+        <h2>Deixe seu Recado ❤️</h2>
+    
+        <form id="recadoForm">
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+            <button type="submit" class="message-button">Enviar Recado</button>
+        </form>
+    
+        <div id="successMessage" style="display:none;">Recado enviado com sucesso! ✅</div>
+    </section>
     
     <script src="main.js"></script>
 </body>
