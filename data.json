@@ -20,6 +20,11 @@
         "price": "R$ 80,00"
     },
     {
+        "id": "21",
+        "name": "Fralda Pampers Confort Sec M - 70 unidades",
+        "price": "R$ 80,00"
+    },
+    {
         "id": "5",
         "name": "Jogo de Lençol - Bordado de Bichinhos da Floresta",
         "price": "R$ 60,00"
@@ -51,7 +56,52 @@
     },
     {
         "id": "11",
-        "name": "Mamadeira Pétala",
-        "price": "R$ 100,00"
-    }   
+        "name": "Mamadeira Pétala 125 Ml",
+        "price": "R$ 105,00"
+    },
+    {
+        "id": "12",
+        "name": "Pomada Antiassaduras Neo Química",
+        "price": "R$ 20,00"
+    },
+    {
+        "id": "13",
+        "name": "Compressa Refrescante Para Alívio De Febre Xô Febre",
+        "price": "R$ 45,00"
+    },
+    {
+        "id": "14",
+        "name": "Aspirador Nasal Kuka",
+        "price": "R$ 50,00"
+    },
+    {
+        "id": "15",
+        "name": "Almofada Amamentação Safári",
+        "price": "R$ 110,00"
+    },
+    {
+        "id": "16",
+        "name": "Bichinhos Para Banho Buba",
+        "price": "R$ 55,00"
+    },
+    {
+        "id": "17",
+        "name": "Patinhos De Banho Buba",
+        "price": "R$ 30,00"
+    },
+    {
+        "id": "18",
+        "name": "Água de Colônia Mamãe e Bebê Natura",
+        "price": "R$ 105,00"
+    },
+    {
+        "id": "19",
+        "name": "Hidratante Mamãe e Bebê Natura",
+        "price": "R$ 65,00"
+    },
+    {
+        "id": "20",
+        "name": "Cueiro Papi Soft Estampado - 3 unidades",
+        "price": "R$ 60,00"
+    } 
 ]
