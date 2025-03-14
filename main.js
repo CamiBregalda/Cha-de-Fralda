@@ -2,7 +2,7 @@ function openModal(name, price, imageId, link) {
     document.getElementById('modalProductName').innerText = name;
     document.getElementById('modalProductPrice').innerText = price;
     document.getElementById("productImage").src = "img/Produtos/" + imageId + ".jpg";
-    document.getElementById('qrcode').src = "img/Qr Codes/" + imageId + ".jpg";
+    document.getElementById('qrcode').src = "img/Qr Codes/" + imageId + ".jpeg";
     document.getElementById('modal').style.display = 'flex';
 
     const productLink = document.getElementById('productLink');
@@ -14,17 +14,6 @@ function openModal(name, price, imageId, link) {
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
-/*
-function copyLink() {
-    const link = document.getElementById('productLink').innerText;
-    navigator.clipboard.writeText(link) 
-        .then(() => {
-            alert('Link copiado!');
-        })
-        .catch(err => {
-            console.error('Erro ao copiar o link: ', err);
-        });
-}*/
 
 function copyLink() {
     const productLink = document.getElementById('productLink');
