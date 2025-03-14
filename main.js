@@ -1,16 +1,20 @@
 function openModal(name, price, imageId, link) {
     document.getElementById('modalProductName').innerText = name;
     document.getElementById('modalProductPrice').innerText = price;
-    document.getElementById('productLink').innerText = link;
     document.getElementById("productImage").src = "img/Produtos/" + imageId + ".jpg";
-    document.getElementById('qrcode').src = "img/Qr Codes/" + imageId + ".png";
+    document.getElementById('qrcode').src = "img/Qr Codes/" + imageId + ".jpg";
     document.getElementById('modal').style.display = 'flex';
+
+    const productLink = document.getElementById('productLink');
+    productLink.innerText = 'Link do Pix';
+
+    productLink.setAttribute('data-link', link);
 }
 
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
-
+/*
 function copyLink() {
     const link = document.getElementById('productLink').innerText;
     navigator.clipboard.writeText(link) 
@@ -20,6 +24,21 @@ function copyLink() {
         .catch(err => {
             console.error('Erro ao copiar o link: ', err);
         });
+}*/
+
+function copyLink() {
+    const productLink = document.getElementById('productLink');
+    const linkToCopy = productLink.getAttribute('data-link');
+
+    if (linkToCopy) {
+        navigator.clipboard.writeText(linkToCopy).then(() => {
+            alert('Link copiado com sucesso!');
+        }).catch(err => {
+            console.error('Erro ao copiar o link:', err);
+        });
+    } else {
+        alert('Nenhum link disponível para copiar.');
+    }
 }
 
 window.onclick = function (event) {
