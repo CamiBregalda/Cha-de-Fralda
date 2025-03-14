@@ -1,6 +1,7 @@
-function openModal(name, price, imageId) {
+function openModal(name, price, imageId, link) {
     document.getElementById('modalProductName').innerText = name;
     document.getElementById('modalProductPrice').innerText = price;
+    document.getElementById('productLink').innerText = link;
     document.getElementById("productImage").src = "img/Produtos/" + imageId + ".jpg";
     document.getElementById('qrcode').src = "img/Qr Codes/" + imageId + ".png";
     document.getElementById('modal').style.display = 'flex';
@@ -44,7 +45,7 @@ async function loadProducts() {
                 <div class="card-content">
                     <h3>${product.name}</h3>
                     <p class="price">${product.price}</p>
-                    <button class="buy-button" onclick="openModal('${product.name}', '${product.price}', '${product.id}')">
+                    <button class="buy-button" onclick="openModal('${product.name}', '${product.price}', '${product.id}', '${product.link}')">
                     Presentear
                     </button>
                 </div>
@@ -92,9 +93,9 @@ function updateDisplay() {
 
     allCards.forEach((card, index) => {
         if (index >= start && index < end) {
-        card.style.display = 'flex';
+            card.style.display = 'flex';
         } else {
-        card.style.display = 'none';
+            card.style.display = 'none';
         }
     });
 }
@@ -158,12 +159,12 @@ document.getElementById('recadoForm').addEventListener('submit', function (e) {
     const mensagem = document.getElementById('mensagem').value;
 
     // Trocar pelo FORM ID correspondente
-    const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSc-U9ev8A0UCvMt5hmwUxk6WxElCgngovBjvX-iRjtBCL-UZA/formResponse?usp=dialog';
+    const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSc4msnOjGADiouDC_UbY3V1x8Ife0MqdOf62z9UaWUfIanYEg/formResponse?usp=dialog';
 
     // Trocar os entry IDs do forms
     const formData = new FormData();
-    formData.append('entry.519513100', nome);       
-    formData.append('entry.1337072746', mensagem);   
+    formData.append('entry.748575701', nome);       
+    formData.append('entry.1499394857', mensagem);   
 
     fetch(formURL, {
         method: 'POST',
