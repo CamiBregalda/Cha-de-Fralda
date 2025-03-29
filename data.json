@@ -26,15 +26,9 @@
     },
     {
         "id": "2",
-        "name": "Sabonete Líquido Recém Nascido",
-        "price": "R$ 25,00",
-        "link": "00020101021126540014br.gov.bcb.pix0111023372430360217SABONETE JOHNSONS520400005303986540525.005802BR5912ELISA PRIMEL6008BRASILIA62070503***6304AA7A"
-    },
-    {
-        "id": "3",
-        "name": "Loção Hidratante Recém Nascido",
-        "price": "R$ 40,00",
-        "link": "00020101021126500014br.gov.bcb.pix0111023372430360213LOCAO JOHSONS520400005303986540540.005802BR5912ELISA PRIMEL6008BRASILIA62070503***63047AFA"
+        "name": "Sabonete Líquido e Loção Hidratante Recém Nascido",
+        "price": "R$ 65,00",
+        "link": "00020101021126330014br.gov.bcb.pix011102337243036520400005303986540565.005802BR5912ELISA PRIMEL6008BRASILIA62070503***6304812E"
     },
     {
         "id": "8",
@@ -43,16 +37,10 @@
         "link": "00020101021126500014br.gov.bcb.pix0111023372430360213LENCO PAMPERS520400005303986540535.005802BR5912ELISA PRIMEL6008BRASILIA62070503***630403BF"
     },
     {
-        "id": "7",
-        "name": "Lenços Umedecidos Johnson's - 48 unidades",
-        "price": "R$ 25,00",
-        "link": "00020101021126510014br.gov.bcb.pix0111023372430360214LENCO JOHNSONS520400005303986540525.005802BR5912ELISA PRIMEL6008BRASILIA62070503***63046F2F"
-    },
-    {
         "id": "12",
-        "name": "Pomada Antiassaduras Neo Química",
-        "price": "R$ 20,00",
-        "link": "00020101021126430014br.gov.bcb.pix0111023372430360206POMADA520400005303986540520.005802BR5912ELISA PRIMEL6008BRASILIA62070503***6304EDEE"
+        "name": "Pomada Antiassaduras Neo Química e Lenços Umedecidos Johnsons",
+        "price": "R$ 65,00",
+        "link": "00020101021126330014br.gov.bcb.pix011102337243036520400005303986540565.005802BR5912ELISA PRIMEL6008BRASILIA62070503***6304812E"
     },
     {
         "id": "20",
